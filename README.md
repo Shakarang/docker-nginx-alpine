@@ -2,7 +2,6 @@
 
 Docker file for Deluge using Alpine linux
 
-
 ### Build from Dockerfile :
 
 ```bash
@@ -16,7 +15,6 @@ docker build -t shakarang/nginx-alpine .
 Available ports are :
 
 - 80
-
 - 443
 
 ### Volumes :
@@ -24,16 +22,10 @@ Available ports are :
 You can bind multiple volumes :
 
 - /etc/nginx/sites-enabled
-
 - /etc/nginx/certs
-
 - /etc/nginx/conf.d
-
 - /var/log/nginx
-
-- /var/www/html
-
-- /var/www/404/
+- /var/www
 
 ### Running :
 
@@ -44,14 +36,13 @@ nginx:
   container_name: nginx-alpine
   image: shakarang/nginx-alpine
   ports:
-    - 83:80
-    - 444:443
+    - 8080:80
+    - 4443:443
   volumes:
     - ./nginx/sites-enabled:/etc/nginx/sites-enabled
     - ./nginx/certs:/etc/nginx/certs
     - ./nginx/conf.d:/etc/nginx/conf.d
     - ./nginx/log:/var/log/nginx
-    - ./nginx/www/html:/var/www/html
-    - ./nginx/www/404:/var/www/404/
+    - ./nginx/www:/var/www
   restart: always
 ```
