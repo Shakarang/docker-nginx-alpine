@@ -1,5 +1,5 @@
 FROM nginx:stable-alpine
-MAINTAINER Maxime Junger <maxime.junger@epitech.eu>
+MAINTAINER Maxime Junger <maxime@junger.io>
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
