@@ -1,4 +1,4 @@
-# nginx-alpine
+# docker-nginx-alpine
 
 Docker file for Deluge using Alpine linux
 
