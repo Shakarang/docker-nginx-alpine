@@ -26,6 +26,7 @@ You can bind multiple volumes :
 - /etc/nginx/conf.d
 - /var/log/nginx
 - /var/www
+- /usr/share/nginx/html
 
 ### Running :
 
